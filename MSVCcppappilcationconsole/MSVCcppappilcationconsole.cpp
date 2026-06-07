@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
 		return 1;
 	}
 
-	float num = std::stof(argv[1]);
+	double num = std::stod(argv[1]);
 
 	std::cout << "What is the interest(In decimal): " << std::endl;
 	std::cin >> interest;
