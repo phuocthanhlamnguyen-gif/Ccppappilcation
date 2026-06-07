@@ -11,11 +11,27 @@ int main(int argc, char *argv[]) {
 	double num = std::stod(argv[1]);
 	std::cout << "What is the interest(In decimal): " << std::endl;
 	std::cin >> interest;
-	std::cout << "What is the time in years: " << std::endl;
-	std::cin >> time;
-	for (int i = 0; i < time; i++) {
-		num = num * (1 + interest);
+	if (std::cin.fail()) {
+		std::cout << "Failed!" << std::endl;
+		return 1;
 	}
-	std::cout << "The interest after " << time << " year is $" << std::setprecision(2) << std::fixed << num << std::endl;
-	return 0;
+	else {
+		std::cout << "What is the time in years: " << std::endl;
+		std::cin >> time;
+
+		if (std::cin.fail()) {
+			std::cout << "Failed!" << std::endl;
+			return 1;
+		}
+		else
+		{
+			for (int i = 0; i < time; i++) {
+				num = num * (1 + interest);
+			}
+			//Output
+			std::cout << "The interest after " << time << " year is $" << std::setprecision(2) << std::fixed << num << std::endl;
+			return 0;
+		}
+
+	}
 }
