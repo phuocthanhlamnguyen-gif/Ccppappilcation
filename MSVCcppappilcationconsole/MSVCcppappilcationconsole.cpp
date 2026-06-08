@@ -4,11 +4,12 @@
 #include <algorithm> 
 #include <cctype>
 #include <cstdlib>
+#include <cmath>
 
 int main(int argc, char *argv[]) {
 	float interest;
 	int time;
-	float num2;
+	double num2;
 	if (argc != 2) {
 		std::cout << "Failed!" << std::endl;
 		return 1;
@@ -40,21 +41,21 @@ int main(int argc, char *argv[]) {
 				}
 
 				if (time == 1) {
-					if (num > 0) {					
+					if (num >= 0) {                    
 						//Output if time == 1
 						std::cout << "The interest after " << time << " year is $" << std::setprecision(2) << std::fixed << num << std::endl;
 						return 0;
 					}
 					else {					
 						//Turning the negative num => positive num
-						num2 = std::abs(num);
+						num2 = std::abs(num);  
 						//Output if time != 1 && num < 0
 						std::cout << "The interest after " << time << " year is -$" << std::setprecision(2) << std::fixed << num2 << std::endl;
 						return 0;
 					}
 				}
 				else {
-					if (num > 0) {
+					if (num >= 0) {
 						//Output if time != 1 && num > 0
 						std::cout << "The interest after " << time << " years is $" << std::setprecision(2) << std::fixed << num << std::endl;
 						return 0;
