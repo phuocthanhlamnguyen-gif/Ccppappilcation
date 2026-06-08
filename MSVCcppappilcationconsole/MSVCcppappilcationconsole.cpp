@@ -3,6 +3,7 @@
 #include <iomanip>
 #include <algorithm> 
 #include <cctype>
+#include <cstdlib>
 
 int main(int argc, char *argv[]) {
 	float interest;
@@ -46,7 +47,7 @@ int main(int argc, char *argv[]) {
 					}
 					else {					
 						//Turning the negative num => positive num
-						num2 = num - num - num;
+						num2 = std::abs(num);
 						//Output if time != 1 && num < 0
 						std::cout << "The interest after " << time << " year is -$" << std::setprecision(2) << std::fixed << num2 << std::endl;
 						return 0;
@@ -60,7 +61,7 @@ int main(int argc, char *argv[]) {
 					}
 					else {		
 						//Turning the negative num => positive num
-						num2 = num - num - num;
+						num2 = std::abs(num);
 						//Output if time != 1 && num < 0
 						std::cout << "The interest after " << time << " years is -$" << std::setprecision(2) << std::fixed << num2 << std::endl;
 						return 0;
