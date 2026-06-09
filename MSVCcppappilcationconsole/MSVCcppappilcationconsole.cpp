@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
 		double num = std::stod(argv[1]);
 		std::cout << "What is the interest(In decimal): " << std::endl;
 		std::cin >> interest;
-		if (std::cin.fail()) {
+		if (std::cin.fail() || interest < 0) {
 			//Fail system 1
 			std::cout << "Failed!" << std::endl;
 			return 1;
@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
 			std::cin >> time;
 
 			//Fail system 2
-			if (std::cin.fail()) {
+			if (std::cin.fail() || interest < 0) {
 				std::cout << "Failed!" << std::endl;
 				return 1;
 			}
@@ -52,7 +52,7 @@ int main(int argc, char *argv[]) {
 						//Output if time != 1 && num > 0
 						std::cout << "The interest after " << time << " years is $" << std::setprecision(2) << std::fixed << num << std::endl;
 						return 0;
-					}
+					} 
 				}
 			}
 		}
