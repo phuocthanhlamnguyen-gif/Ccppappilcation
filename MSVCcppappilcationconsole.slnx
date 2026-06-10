@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="MSVCcppappilcationconsole/MSVCcppappilcationconsole.vcxproj" />
+  <Project Path="../../../../../../source/repos/MSVCcppappilcationconsole/MSVCcppappilcationconsole/MSVCcppappilcationconsole.vcxproj" Id="48bffc6e-a34a-4d06-b444-910fc2663656" />
 </Solution>

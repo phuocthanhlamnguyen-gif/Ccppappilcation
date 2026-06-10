@@ -6,10 +6,13 @@
 #include <cstdlib>
 #include <cmath>
 
+#define NUM2 0
+
 int main(int argc, char *argv[]) {
+	//Named of variables
 	float interest;
 	int time;
-	double num2;
+	double num2 = NUM2;
 	if (argc != 2) {
 		std::cout << "Failed!" << std::endl;
 		return 1;
