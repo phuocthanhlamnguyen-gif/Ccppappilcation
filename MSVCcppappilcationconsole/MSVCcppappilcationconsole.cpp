@@ -8,7 +8,7 @@
 
 #define NUM2 0
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[]/*Command line argument*/) {
 	//Named of variables
 	float interest;
 	int time;
